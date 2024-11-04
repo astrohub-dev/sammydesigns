@@ -1,0 +1,446 @@
+.body{
+    background-color: rgb(26, 44, 72);
+    margin: 0;
+}
+
+.header{
+    background-color: white;
+    height: 45px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo{
+    height: 45px;
+    width: 45px;
+    margin-left: 3px;
+}
+
+.fa-list{
+    font-size: 1.4rem;
+    margin-right: 7px;
+}
+
+.header-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-note{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.static-texts{
+    color: rgb(191, 211, 230);
+    font-family: monospace;
+    font-size: 20px;
+    font-style: oblique;
+}
+
+.welcome-note span{
+    color: rgb(208, 78, 78);
+    font-size: 1.8rem;
+}
+
+.dynamic-texts{
+    color: rgb(191, 211, 230);
+    font-family: monospace;
+    font-weight: 50;
+    font-style: oblique;
+    position: relative;
+}
+
+.dynamic-texts::after{
+    content: ">";
+    position: absolute;
+    right: 0;
+    color: aliceblue;
+    background-color: rgb(26, 44, 72);
+    width: 100%;
+    height: 100%;
+    animation: typing 7s steps(52) alternate infinite;
+}
+
+@keyframes typing {
+    to {
+        width: 0% 
+    }
+}
+
+.container{
+    position: relative;
+}
+
+.container .wrapper{
+    width: 60vw;
+    height: 75vh;
+    margin: 5rem auto;
+    overflow: hidden;
+}
+
+.container .wrapper-holder{
+    display: grid;
+    grid-template-columns: repeat(4, 100%);
+    height: 100%;
+    width: 100%;
+    animation: slider 25s ease-in-out infinite alternate;
+}
+
+.container .button-holder .button{
+    background-color: rgb(242, 242, 242);
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: .3rem;
+}
+
+.container .button-holder{
+    position: absolute;
+    left: 45%;
+    bottom: 0%;
+}
+
+@keyframes slider{
+    0%{transform: translateX(0%);}
+    10%{transform: translateX(-100%);}
+    20%{transform: translateX(-100%);}
+    30%{transform: translateX(-200%);}
+    40%{transform: translateX(-200%);}
+    50%{transform: translateX(-200%);}
+    60%{transform: translateX(-300%);}
+    70%{transform: translateX(-300%);}
+    80%{transform: translateX(-300%);}
+    90%{transform: translateX(0%);}
+    100%{transform: translateX(0%);}
+}
+
+.button{
+    background-position: crgb(181, 196, 210)enter;
+}
+
+.slides{
+    text-align: center;
+}
+
+.p1{
+    color: rgb(255, 133, 133);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    position: relative;
+    bottom: 40px;
+}
+
+section{
+    display: flex;
+    justify-content: ceneter;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+section img{
+    height: 320px;
+    width: 300px;
+    border-radius: 15px;
+}
+
+section p{
+    color: rgb(191, 211, 230);
+    font-family: monospace;
+    font-size: 15px;
+    font-style: oblique;
+}
+
+section .animate{
+    transition: 1s;
+    filter: blur(5px);
+    opacity: 0;
+}
+
+section.show-animate .animate{
+    filter: blur(0);
+    opacity: 1;
+}
+
+.sec-3 .animate{
+    transform: translateX(100%);
+}
+
+.sec-3.show-animate .animate{
+    transform: translateX(0);
+}
+
+.sec-2 .animate{
+    transform: translateX(-100%);
+}
+
+.sec-2.show-animate .animate{
+    transform: translateX(0);
+}
+
+.sec-1 .animate{
+    transform: scale(.7);
+}
+
+.sec-1.show-animate .animate{
+    transform: scale(1);
+}
+
+footer{
+    text-align: center;
+    border-top: 3px solid;
+    border-color: rgb(194, 205, 215);
+    margin-left: 25px;
+    margin-right: 25px;
+    position: relative;
+    bottom: 42px;
+}
+
+footer h3{
+    color: rgb(208, 78, 78);
+    font-family: monospace;
+}
+
+footer p{
+    color: aliceblue;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav a{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 7px;
+}
+
+.social i{
+    font-size: 20px;
+}
+
+.social span{
+    font-family: monospace;
+    font-size: large;
+}
+
+footer h4{
+    color: rgb(187, 199, 209);
+    font-weight: bolder;
+    font-family: monospace;
+    margin-top: 40px;
+}
+/*
+.social #whatsapp{
+    color: rgb(107, 248, 121);
+}
+
+.social #facebook{
+    color: rgb(85, 143, 250);
+}
+
+.social #instagram{
+    color: rgb(255, 103, 161);
+} */
+
+.menu{
+    position: absolute;
+    top: 50px;
+    background-color: rgb(193, 173, 147);
+    width: 100%;
+    padding-bottom: 30px;
+    box-shadow: 3px 3px 5px;
+    transform: translateY(-150%);
+    transition: .6s;
+}
+
+.menu .sidebars{
+    text-align: center;
+}
+
+.sidebars a{
+    text-decoration: none;
+    color: rgb(55, 86, 112);
+}
+
+.sidebars a h2{
+    border-bottom: 3px solid;
+    border-color: aliceblue;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: monospace;
+}
+
+.show{
+    transform: translateY(0%);
+    transition: .6s;
+}
+  
+  .products-grid {
+    display: grid;
+  
+    /* - In CSS Grid, 1fr means a column will take up the
+         remaining space in the grid.
+       - If we write 1fr 1fr ... 1fr; 8 times, this will
+         divide the grid into 8 columns, each taking up an
+         equal amount of the space.
+       - repeat(8, 1fr); is a shortcut for repeating "1fr"
+         8 times (instead of typing out "1fr" 8 times).
+         repeat(...) is a special property that works with
+         display: grid; */
+    grid-template-columns: repeat(8, 1fr);
+  }
+  
+  /* @media is used to create responsive design (making the
+     website look good on any screen size). This @media
+     means when the screen width is 2000px or less, we
+     will divide the grid into 7 columns instead of 8. */
+  @media (max-width: 2000px) {
+    .products-grid {
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
+  
+  /* This @media means when the screen width is 1600px or
+     less, we will divide the grid into 6 columns. */
+  @media (max-width: 1600px) {
+    .products-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  
+  @media (max-width: 1300px) {
+    .products-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .products-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .products-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .product-image{
+      max-width: fit-content;
+      border-radius: 2.5px;
+    }
+
+    .container .wrapper{
+      width: 100%;
+      height: 50vh;
+      margin: 5rem auto;
+  }
+  }
+  
+  .product-container {
+    padding-top: 40px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+  
+    border-right: 1px solid rgb(231, 231, 231);
+    border-bottom: 1px solid rgb(231, 231, 231);
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    height: 180px;
+    margin-bottom: 20px;
+  }
+  
+  .product-image {
+    /* Images will overflow their container by default. To
+      prevent this, we set max-width and max-height to 100%
+      so they stay inside their container. */
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .product-name {
+    height: 40px;
+    margin-bottom: 5px;
+    color: rgb(193, 193, 193);
+  }
+  
+  .product-price {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color:  rgb(230, 230, 230);
+  }
+  
+  .product-spacer {
+    flex: 1;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .about{
+    text-align: center;
+    background-color: rgb(245, 227, 203);
+    padding-top: 10px;
+  }
+
+  .about h1{
+    color: rgb(109, 75, 75);
+  }
+
+  .about img{
+    border-radius: 200px;
+  }
+
+  .about p{
+    font-size: 18px;
+    color: rgb(87, 57, 57);
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .about .p{
+    font-weight: bold;
+  }
+
+  .about p span{
+    color: rgb(142, 0, 0);
+  }
+
+  .footer{
+    margin-top: 60px;
+  }
+
+  p .design{
+    color: rgb(207, 46, 34);
+    border-radius: 2px;
+  }
+
+  a:hover{
+    color: rgba(197, 110, 95, 0.785);
+    border-radius: 2px;
+  }
